@@ -279,7 +279,6 @@
     	        <p>Namaste und Herzlich Willkommen in unserem Restaurant Haryana in Oldenburg.
 
 
-
 Im Scheideweg bieten wir Ihnen leckere Speisen aus Indien. Schauen Sie sich auf unseren Seiten schon einmal an, was Sie bei uns erwartet.
 
 
