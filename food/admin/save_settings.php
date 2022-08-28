@@ -28,11 +28,8 @@ $query->address=$address;
 $query->city=$city;
 $query->country=$country;
 $query->save();
-if(query){
+if($query){
       header("location:site_settings.php?success=true");
         }else{
             header("location:site_settings.php?failed=true");
-        } 
-  
-
-?>
+        }

@@ -3,7 +3,7 @@
 $db_host		= 'localhost';
 $db_user		= 'root';
 $db_pass		= '';
-$db_database	= 'haryana'; 
+$db_database	= 'haryana_restaurant_deharyana'; 
 
 /* End config */
 include "idiorm.php";
@@ -34,6 +34,3 @@ class App {
 function get($val){
     return @$_GET[$val];
     }
-    
-
-?>
