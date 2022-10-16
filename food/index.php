@@ -306,71 +306,25 @@
     <div class="section-title">
         <h2><span>Unsere berühmten Gerichte</span></h2>
     </div>
+    <?php
+    $result = ORM::for_table("image_gallery")
+        ->find_array(1);
+    ?>
+    <?php foreach ($result as $res) : ?>
     <div class="medium-3 small-12 columns">
         <div class="icon-box">
             <div class="float-left">
-                <img src="haryana_img/haryana-salat.jpg" style="width: 100%; height: auto;" alt="imge">
-            </div>
-            <div class="">
-                <p><strong>Haryana Salat</strong><br>
-                </p>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div><!-- icon-box ends -->
+                <img class="img-responsive" alt="" style="width: 250px; height:250px;"
+                    src="admin/uploads/<?php echo $res['image'] ?>" />
+                <div class='text-center'>
+                    <strong class='text-muted'><?php echo $res['title'] ?></strong>
 
-    <div class="medium-3 small-12 columns">
-        <div class="icon-box">
-            <div class="float-left">
-                <img src="haryana_img/paperdam.jfif" style="width: 100%; height: auto;" alt="imge">
+                </div>
             </div>
-            <div class="">
-                <p><strong>Paperdam </strong><br>
-                </p>
-            </div>
-            <div class="clearfix"></div>
-
-        </div>
-
-    </div>
-    <div class="medium-3 small-12 columns">
-        <div class="icon-box">
-            <div class="float-left">
-                <img src="haryana_img/chicken_biryani.jfif" style="width: 100%; height: auto;" alt="imge">
-            </div>
-            <div class="">
-                <p><strong>Chicken Biryani</strong><br>
-                </p>
-            </div>
-            <div class="clearfix"></div>
         </div>
     </div>
-    <div class="medium-3 small-12 columns">
-        <div class="icon-box">
-            <div class="float-left">
-                <img src="haryana_img/Naan.jfif" style="width: 100%; height: auto;" alt="imge">
-            </div>
-            <div class="">
-                <p><strong>Naan </strong><br>
-                </p>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-    <div class="medium-3 small-12 columns">
-        <div class="icon-box">
-            <div class="float-left">
-                <img src="haryana_img/saag paneer.jfif" style="width: 100%; height: auto;" alt="imge">
-            </div>
-            <div class="">
-                <p><strong>saag paneer </strong><br>
-                </p>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
+    <?php endforeach; ?>
 </div>
-<!-- Meet your Team Sect -->
 
 <!-- Reason Section Start -->
 <div class="home-module"></div>
@@ -384,9 +338,14 @@
             <li class="accordion-item is-active" data-accordion-item>
                 <a href="#" class="accordion-title">Authentic</a>
                 <div class="accordion-content" data-tab-content>
-                    Das Essen, das wir hier anbieten, ist alles authentisch, da es von unserem Koch hergestellt wird,
-                    der etwas ganz Besonderes ist und viel Erfahrung in dieser Angelegenheit hat. Wir importieren die
-                    Gewürze meistens direkt aus Indien, die meistens als Integrienten verwendet werden (natürlich wurde
+                    Das Essen, das wir hier anbieten, ist alles authentisch, da es von unserem Koch
+                    hergestellt wird,
+                    der etwas ganz Besonderes ist und viel Erfahrung in dieser Angelegenheit hat.
+                    Wir
+                    importieren die
+                    Gewürze meistens direkt aus Indien, die meistens als Integrienten verwendet
+                    werden
+                    (natürlich wurde
                     die Qualität getestet)
                 </div>
             </li>
@@ -394,8 +353,11 @@
             <li class="accordion-item" data-accordion-item>
                 <a href="#" class="accordion-title">Zufriedene Gäste</a>
                 <div class="accordion-content" data-tab-content>
-                    Seit unseren Eröffnungstagen in Oldenburg können wir Tausende zufriedener Gäste gewinnen. Wir
-                    möchten uns auch bei unseren treuen Gästen bedanken, die uns in unseren Höhen und Tiefen geholfen
+                    Seit unseren Eröffnungstagen in Oldenburg können wir Tausende zufriedener Gäste
+                    gewinnen. Wir
+                    möchten uns auch bei unseren treuen Gästen bedanken, die uns in unseren Höhen
+                    und Tiefen
+                    geholfen
                     haben.
                 </div>
             </li>
@@ -403,17 +365,27 @@
             <li class="accordion-item" data-accordion-item>
                 <a href="#" class="accordion-title">Qualität & Lebensmittelsicherheit</a>
                 <div class="accordion-content" data-tab-content>
-                    Unser Plan zur Qualitätssicherung und Lebensmittelsicherheit ist eine sich ständig
-                    weiterentwickelnde vorbeugungsbasierte Kombination aus Produktstandards, Fachpersonal, strengen
-                    Bewertungsprogrammen und nachvollziehbarer, organisierter Kommunikation in der gesamten Lieferkette.
+                    Unser Plan zur Qualitätssicherung und Lebensmittelsicherheit ist eine sich
+                    ständig
+                    weiterentwickelnde vorbeugungsbasierte Kombination aus Produktstandards,
+                    Fachpersonal,
+                    strengen
+                    Bewertungsprogrammen und nachvollziehbarer, organisierter Kommunikation in der
+                    gesamten
+                    Lieferkette.
                 </div>
             </li>
             <li class="accordion-item" data-accordion-item>
                 <a href="#" class="accordion-title">Nachhaltigkeit</a>
                 <div class="accordion-content" data-tab-content>
-                    Nachhaltigkeit ist ein gutes Geschäft. Wir konzentrieren uns auf die schnelle Lieferung und die
-                    Wiederverwendung von Ressourcen für ein effizientes Transportsystem. Nachhaltigkeit spart Marketing-
-                    und Betriebskosten und verbessert gleichzeitig die Chancen für zukünftige Generationen.
+                    Nachhaltigkeit ist ein gutes Geschäft. Wir konzentrieren uns auf die schnelle
+                    Lieferung
+                    und die
+                    Wiederverwendung von Ressourcen für ein effizientes Transportsystem.
+                    Nachhaltigkeit
+                    spart Marketing-
+                    und Betriebskosten und verbessert gleichzeitig die Chancen für zukünftige
+                    Generationen.
                 </div>
             </li>
 
@@ -431,7 +403,8 @@
 <div class="call-to-action">
     <div class="row">
         <div class="medium-10 small-12 columns">
-            <h2><i class="fa fa-phone" aria-hidden="true"></i> Wenn Sie Fragen haben, rufen Sie uns an
+            <h2><i class="fa fa-phone" aria-hidden="true"></i> Wenn Sie Fragen haben, rufen Sie uns
+                an
                 <span>0441/96013838</span>
             </h2>
         </div>
@@ -440,5 +413,6 @@
         </div>
     </div><!-- row -->
 </div>
+
 <!-- Call to Action End -->
-<?php include 'footer.php'; ?>
+<?php include 'footer.php';

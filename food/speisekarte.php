@@ -7,13 +7,13 @@
             <div class="medium-8 small-12 columns">
                 <h2>Speisekarte und bestellung</h2>
                 <?php
-                                $result = ORM::for_table("site_about")
-                                        ->find_array(1);
-                                ?>
+                $result = ORM::for_table("site_about")
+                    ->find_array(1);
+                ?>
                 <?php foreach ($result as $res) : ?>
 
 
-                <p> <?php echo $res['innovation']; ?></p>
+                <p> <?php echo $res['speisekarte']; ?></p>
 
                 <?php endforeach; ?>
 
