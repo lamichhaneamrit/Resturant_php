@@ -1,11 +1,8 @@
 <?php
-
 include('header.php');
 ?>
-
 <!DOCTYPE html>
 <html>
-
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
 <body>
@@ -16,23 +13,15 @@ include('header.php');
             <?php
             $result = ORM::for_table("site_about")
                 ->find_array(1);
-
             ?>
-
-
             <?php foreach ($result as $res) : ?>
-
             <p> <?php echo $res['market']; ?></p>
-
             <?php endforeach; ?>
-
         </div>
     </div>
-
     <!--======image gallery ========-->
     <br>
     <div class="row">
-
         <h3>Ünser Besonders Moments </h3>
         </hr>
         <?php
@@ -43,9 +32,7 @@ include('header.php');
         if (!empty($fetchImage)) {
             $sn = 1;
             foreach ($fetchImage as $img) {
-
         ?>
-
         <div class="column">
             <img src="admin/uploads/gallery/" <?php
                                                         echo $img['image_name'];
@@ -96,13 +83,9 @@ include('header.php');
                 echo "No Image is saved in database";
             }
             ?>
-
-
             <!--======image gallery model========-->
-
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
             <div class="caption-container">
                 <p id="caption"></p>
             </div>
@@ -112,9 +95,6 @@ include('header.php');
     <script type="text/javascript" src="js/gallery-script.js"></script>
 
 </body>
-
-
-
 <?php include 'footer.php'; ?>
 </div>
 
